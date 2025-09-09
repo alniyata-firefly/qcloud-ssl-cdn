@@ -6,6 +6,7 @@ on:
   # add a tag to trigger manually
   workflow_dispatch:
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,6 +30,8 @@ jobs:
           ACME_DOMAIN: ${{ secrets.ACME_DOMAIN }}
           SECRETID: ${{ secrets.SECRETID }}
           SECRETKEY: ${{ secrets.SECRETKEY }}
+          Tencent_SecretId: ${{ secrets.SECRETID }}
+          Tencent_SecretKey: ${{ secrets.SECRETKEY }}
           CDN_DOMAIN: ${{ secrets.CDN_DOMAIN }}
           UPDATE_SSL: ${{ secrets.UPDATE_SSL }}
           ZONE_ID: ${{ secrets.ZONE_ID }}
